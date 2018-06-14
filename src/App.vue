@@ -1,28 +1,32 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <UserCard/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import UserCard from './components/UserCard.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    UserCard
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #app {
+    background: url('/static/img/Background.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+  }
 </style>
