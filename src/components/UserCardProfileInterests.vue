@@ -1,10 +1,12 @@
 <template>
   <div class="userCardProfileInterests">
     <h2 class="userCardProfileInterests__infoTitle">Интересы</h2>
-    <UserCardProfileInterestsButton
+    <div class="userCardProfileInterests__buttons">
+      <UserCardProfileInterestsButton
       v-for="interest in interests"
       :key="interest.id"
       :buttonText="interest"/>
+    </div>
   </div>
 </template>
 
@@ -19,7 +21,7 @@ export default {
   props: {
     interests: {
       default () {
-        return ['Нет интересов']
+        return ['N.E.E.T.', 'Музыка', 'компьютеры', 'радио', 'танцы']
       },
       type: Array
     }
@@ -44,5 +46,9 @@ export default {
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+  .userCardProfileInterests__buttons {
+    display: flex;
+    flex-wrap: wrap;
   }
 </style>

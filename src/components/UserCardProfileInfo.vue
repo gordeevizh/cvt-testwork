@@ -59,6 +59,7 @@ export default {
   }
   .userCardProfileInfo__pseudoLink {
     color: #1574af;
+    cursor: pointer;
     text-decoration: underline;
   }
 </style>

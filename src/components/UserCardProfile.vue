@@ -37,9 +37,6 @@ export default {
 
 <style scoped>
   .userCardProfile {
-    width: 487px;
-    height: 278px;
-    background-color: white;
     display: flex;
   }
   .userCardProfile__colLeft {
