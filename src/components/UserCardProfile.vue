@@ -4,7 +4,7 @@
       <UserCardProfileImage/>
       <UserCardProfileButton/>
     </div>
-    <div class="UserCardProfile__colRight">
+    <div class="userCardProfile__colRight">
       <UserCardProfileTitle/>
       <UserCardProfileInfo/>
       <UserCardProfileInterests/>
@@ -42,7 +42,7 @@ export default {
   .userCardProfile__colLeft {
     margin: 15px;
   }
-  .UserCardProfile__colRight {
+  .userCardProfile__colRight {
     margin: 15px 15px 15px 5px;
   }
 </style>

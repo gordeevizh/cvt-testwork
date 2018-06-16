@@ -1,0 +1,68 @@
+[
+  {
+    "imgUrl": "/static/img/DefaultFriend.png",
+    "fullName": "Лев Бронштейн",
+    "address": "г. Ханты-Мансийск",
+    "online": true
+  },
+  {
+    "imgUrl": "/static/img/DefaultFriend.png",
+    "fullName": "Находка Капитал",
+    "address": "г. Усть-Бельск",
+    "online": false
+  },
+  {
+    "imgUrl": "/static/img/DefaultFriend.png",
+    "fullName": "Яндекс Петренко",
+    "address": "г. Пермь",
+    "online": false
+  },
+  {
+    "imgUrl": "/static/img/DefaultFriend.png",
+    "fullName": "Успех Возможностей",
+    "address": "г. Радонеж",
+    "online": true
+  },
+  {
+    "imgUrl": "/static/img/DefaultFriend.png",
+    "fullName": "Инна Нашлась",
+    "address": "г. Омск",
+    "online": true
+  },
+  {
+    "imgUrl": "/static/img/DefaultFriend.png",
+    "fullName": "Алла Подольская",
+    "address": "г. Петропавловск-Камчатский",
+    "online": true
+  },
+  {
+    "imgUrl": "/static/img/DefaultFriend.png",
+    "fullName": "Константин Константинопольский",
+    "address": "г. Санкт-Петербург",
+    "online": true
+  },
+  {
+    "imgUrl": "/static/img/DefaultFriend.png",
+    "fullName": "Василий Котов",
+    "address": "г. Котогорск",
+    "online": true
+  },
+  {
+    "imgUrl": "/static/img/DefaultFriend.png",
+    "fullName": "Екотерина Сметанина",
+    "address": "с. Светломолочное",
+    "online": true
+  },
+  {
+    "imgUrl": "/static/img/DefaultFriend.png",
+    "fullName": "Маруся Кошкина",
+    "address": "г. Пушистые пустоши",
+    "online": false
+  },
+  {
+    "imgUrl": "/static/img/DefaultFriend.png",
+    "fullName": "Кот Дивуар",
+    "address": "г. Ямусукро",
+    "online": true
+  }
+]
