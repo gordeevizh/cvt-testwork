@@ -1,6 +1,7 @@
 <template>
   <div class="userCardProfileImage">
     <img
+      class="userCardProfileImage__img"
       alt="Аватар"
       :src="imgUrl"
     />
@@ -15,17 +16,12 @@ export default {
       default: '/static/img/DefaultUserPic.png',
       type: String
     }
-  },
-  data () {
-    return {
-    }
   }
 }
 </script>
 
 <style scoped>
   .userCardProfileImage {
-    width: 132px;
     height: 169px;
     position: relative;
     border-radius: 3px;
@@ -39,5 +35,23 @@ export default {
     left: 0;
     right: 0;
     box-shadow: inset 0 0 6px -2px rgba(0,0,0,.32);
+    z-index: 10;
+  }
+
+  @media  (min-width: 488px) {
+    .userCardProfileImage {
+      width: 132px;
+    }
+  }
+
+  @media  (min-width: 0) and (max-width: 487px) {
+    .userCardProfileImage {
+      width: 100%;
+    }
+    .userCardProfileImage__img {
+      width: 100%;
+      top: -50%;
+      position: absolute;
+    }
   }
 </style>

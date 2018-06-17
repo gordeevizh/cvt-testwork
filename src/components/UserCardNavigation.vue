@@ -39,6 +39,9 @@ export default {
 </script>
 
 <style scoped>
-  .userCardNavigation {
+  @media  (min-width: 0) and (max-width: 487px) {
+    .userCardNavigation {
+      margin-top: 5px;
+    }
   }
 </style>

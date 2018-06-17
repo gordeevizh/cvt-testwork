@@ -121,12 +121,24 @@ export default {
   .userCardProfileInfo__infoDescription {
     list-style-type: none;
     margin: 0;
-    padding-left: 32px;
     cursor: pointer;
   }
   .userCardProfileInfo__pseudoLink {
     color: #1574af;
     cursor: pointer;
     text-decoration: underline;
+  }
+
+  @media  (min-width: 488px) {
+    .userCardProfileInfo__infoDescription {
+      padding-left: 32px;
+    }
+  }
+
+  @media (min-width: 0) and (max-width: 487px) {
+    .userCardProfileInfo__infoDescription {
+      padding-left: 10px;
+      min-width: 132px;
+    }
   }
 </style>

@@ -10,10 +10,6 @@ export default {
       default: '',
       type: String
     }
-  },
-  data () {
-    return {
-    }
   }
 }
 </script>

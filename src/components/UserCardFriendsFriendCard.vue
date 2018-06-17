@@ -33,10 +33,6 @@ export default {
       },
       type: Object
     }
-  },
-  data () {
-    return {
-    }
   }
 }
 </script>
@@ -44,8 +40,6 @@ export default {
 <style scoped>
   .userCardFriendsFriendCard {
     display: flex;
-    width: 50%;
-    margin-bottom: 30px;
   }
   .userCardFriendsFriendCard__image {
     width: 62px;
@@ -75,5 +69,19 @@ export default {
     font-size: 10px;
     font-style: italic;
     color: #2f8a26;
+  }
+
+  @media (min-width: 488px) {
+    .userCardFriendsFriendCard {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (min-width: 0) and (max-width: 487px) {
+    .userCardFriendsFriendCard {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 </style>

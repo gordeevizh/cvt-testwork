@@ -29,7 +29,7 @@ export default {
       barPosition: 0,
       barStyle: {},
 
-      systemScrollbarWidth: 0,
+      systemScrollbarWidth: 1,
       scrollerStyle: {}
     }
   },
@@ -65,9 +65,14 @@ export default {
       }
     },
     updateScrollerStyle () {
+      let wrapperHeight = this.$refs.wrapper.clientHeight
+      if (wrapperHeight < 10) {
+        wrapperHeight = 'auto'
+      }
+      wrapperHeight += 'px'
       this.scrollerStyle = {
         'width': (this.$refs.scroller.offsetWidth + this.systemScrollbarWidth) + 'px',
-        'height': this.$refs.wrapper.clientHeight + 'px'
+        'height': wrapperHeight
       }
     },
     updateBarStyle () {
@@ -115,5 +120,14 @@ export default {
   .customScroll__content {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  @media  (min-width: 0) and (max-width: 487px) {
+    .customScroll__scrollbar {
+      display: none;
+    }
+    .customScroll__content {
+      flex-direction: column;
+    }
   }
 </style>

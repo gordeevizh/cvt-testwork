@@ -24,9 +24,21 @@ export default {
   #app {
     background: url('/static/img/Background.png');
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
     width: 100%;
+  }
+
+  @media  (min-width: 488px) {
+    #app {
+      align-items: center;
+      height: 100vh;
+    }
+  }
+
+  @media  (min-width: 0) and (max-width: 487px) {
+    #app {
+      align-items: flex-start;
+      height: auto;
+    }
   }
 </style>

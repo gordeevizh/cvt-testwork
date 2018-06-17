@@ -27,10 +27,6 @@ export default {
       },
       type: Array
     }
-  },
-  data () {
-    return {
-    }
   }
 }
 </script>
@@ -42,7 +38,18 @@ export default {
     padding: 15px 12px 15px 15px;
     background: white;
     width: 100%;
-    height: 278px;
     box-sizing: border-box;
+  }
+
+  @media  (min-width: 488px) {
+    .userCardFriends {
+      height: 278px;
+    }
+  }
+
+  @media  (min-width: 0) and (max-width: 487px) {
+    .userCardFriends {
+      height: auto;
+    }
   }
 </style>

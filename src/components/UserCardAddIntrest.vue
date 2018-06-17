@@ -40,7 +40,6 @@ export default {
 <style scoped>
   .userCardAddIntrest {
     font-family: "Arial";
-    width: 487px;
     background-color: white;
     box-sizing: border-box;
     box-shadow: 0px 1px 3px rgba(0,0,0,0.31);
@@ -48,10 +47,29 @@ export default {
     display: flex;
     padding: 15px;
     margin-top: 30px;
-    position: absolute;
   }
   .userCardAddIntrest__input {
-    margin-right: 2em;
     flex-basis: 200%;
+  }
+
+  @media (min-width: 488px) {
+    .userCardAddIntrest {
+      position: absolute;
+      width: 487px;
+    }
+    .userCardAddIntrest__input {
+      margin-right: 2em;
+    }
+  }
+
+  @media (min-width: 0) and (max-width: 487px) {
+    .userCardAddIntrest {
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+    }
+    .userCardAddIntrest__input {
+      margin: 0 0 1em;
+    }
   }
 </style>

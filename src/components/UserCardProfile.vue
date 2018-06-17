@@ -77,7 +77,19 @@ export default {
   .userCardProfile__colLeft {
     margin: 15px;
   }
-  .userCardProfile__colRight {
-    margin: 15px 15px 15px 5px;
+
+  @media (min-width: 488px) {
+    .userCardProfile__colRight {
+      margin: 15px 15px 15px 5px;
+    }
+  }
+
+  @media (min-width: 0) and (max-width: 487px) {
+    .userCardProfile {
+      flex-direction: column;
+    }
+    .userCardProfile__colRight {
+      margin: 15px;
+    }
   }
 </style>

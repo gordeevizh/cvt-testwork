@@ -139,10 +139,24 @@ export default {
 <style scoped>
   .userCard__card {
     font-family: "Arial";
-    width: 487px;
     min-height: 278px;
     background-color: white;
     box-shadow: 0px 1px 3px rgba(0,0,0,0.31);
     border-radius: 3px;
+  }
+
+  @media (min-width: 488px) {
+    .userCard__card {
+      width: 487px;
+    }
+  }
+
+  @media (min-width: 0) and (max-width: 487px) {
+    .userCard {
+      margin: 10px;
+    }
+    .userCard__card {
+      width: 100%
+    }
   }
 </style>
