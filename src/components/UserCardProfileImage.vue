@@ -12,7 +12,7 @@ export default {
   name: 'UserCardProfileImage',
   props: {
     imgUrl: {
-      default: '/static/img/UserPic.png',
+      default: '/static/img/DefaultUserPic.png',
       type: String
     }
   },

@@ -3,9 +3,10 @@
     <h2 class="userCardProfileInterests__infoTitle">Интересы</h2>
     <div class="userCardProfileInterests__buttons">
       <UserCardProfileInterestsButton
-      v-for="interest in interests"
+      v-for="(interest, index) in interests"
       :key="interest.id"
-      :buttonText="interest"/>
+      :buttonText="interest"
+      @click.native="remove(index)"/>
     </div>
   </div>
 </template>
@@ -21,13 +22,14 @@ export default {
   props: {
     interests: {
       default () {
-        return ['N.E.E.T.', 'Музыка', 'компьютеры', 'радио', 'танцы']
+        return ['N.E.E.T.']
       },
       type: Array
     }
   },
-  data () {
-    return {
+  methods: {
+    remove (interestIndex) {
+      this.$emit('removeInterest', interestIndex)
     }
   }
 }

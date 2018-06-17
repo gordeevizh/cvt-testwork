@@ -1,13 +1,27 @@
 <template>
   <div class="userCardProfile">
     <div class="userCardProfile__colLeft">
-      <UserCardProfileImage/>
+      <UserCardProfileImage :imgUrl="user.avatarUrl"/>
       <UserCardProfileButton/>
     </div>
     <div class="userCardProfile__colRight">
-      <UserCardProfileTitle/>
-      <UserCardProfileInfo/>
-      <UserCardProfileInterests/>
+      <UserCardProfileTitle
+        :userName="user.fullName"
+        :address="user.address"
+        @updateUserName="updateUserName"
+      />
+      <UserCardProfileInfo
+        :maritalStatus="user.maritalStatus"
+        :phone="user.phone"
+        :email="user.email"
+        @updateMaritalStatus="updateMaritalStatus"
+        @updatePhone="updatePhone"
+        @updateEmail="updateEmail"
+      />
+      <UserCardProfileInterests
+        :interests="user.interests"
+        @removeInterest="removeInterest"
+      />
     </div>
   </div>
 </template>
@@ -28,8 +42,29 @@ export default {
     UserCardProfileInfo,
     UserCardProfileInterests
   },
-  data () {
-    return {
+  props: {
+    user: {
+      default () {
+        return {}
+      },
+      type: Object
+    }
+  },
+  methods: {
+    removeInterest (interestIndex) {
+      this.$emit('removeInterest', interestIndex)
+    },
+    updateUserName (newName) {
+      this.$emit('updateUserName', newName)
+    },
+    updateMaritalStatus (newStatus) {
+      this.$emit('updateMaritalStatus', newStatus)
+    },
+    updatePhone (newPhone) {
+      this.$emit('updatePhone', newPhone)
+    },
+    updateEmail (newEmail) {
+      this.$emit('updateEmail', newEmail)
     }
   }
 }

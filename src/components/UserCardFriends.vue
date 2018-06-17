@@ -1,6 +1,6 @@
 <template>
   <div class="userCardFriends">
-    <CustomScroll :containerHeight="cardHeight">
+    <CustomScroll>
       <UserCardFriendsFriendCard
         v-for="friend in friends"
         :key="friend.id"
@@ -30,7 +30,6 @@ export default {
   },
   data () {
     return {
-      cardHeight: 248
     }
   }
 }

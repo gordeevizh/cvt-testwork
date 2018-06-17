@@ -1,13 +1,39 @@
 <template>
   <div class="userCardProfileTitle">
-    <h1 class="userCardProfileTitle__userName">{{userName}}</h1>
+    <UserCardEditor
+      modifer="nameEditor"
+      v-if="openNameEditor"
+      v-focus="openNameEditor"
+      :value="userName"
+      @updateField="updateUserName"
+      @close="openNameEditor=false"
+    />
+    <h1
+      class="userCardProfileTitle__userName"
+      v-else
+      @click="openNameEditor=true"
+    >{{userName}}</h1>
     <p class="userCardProfileTitle__address">{{address}}</p>
   </div>
 </template>
 
 <script>
+import UserCardEditor from './UserCardEditor'
+
 export default {
   name: 'UserCardProfileTitle',
+  components: {
+    UserCardEditor
+  },
+  directives: {
+    focus: {
+      inserted: function (el, binding) {
+        if (binding.value) {
+          el.firstChild.focus()
+        }
+      }
+    }
+  },
   props: {
     userName: {
       default: 'Безымянный',
@@ -20,6 +46,12 @@ export default {
   },
   data () {
     return {
+      openNameEditor: false
+    }
+  },
+  methods: {
+    updateUserName (newName) {
+      this.$emit('updateUserName', newName)
     }
   }
 }
@@ -35,6 +67,7 @@ export default {
     font-weight: normal;
     line-height: 21px;
     margin: 0;
+    cursor: pointer;
   }
   .userCardProfileTitle__address {
     color: #757575;

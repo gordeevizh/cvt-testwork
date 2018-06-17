@@ -1,0 +1,13 @@
+{
+	"fullName": "Виталя Гора",
+	"address": "г. Нижние Шахты",
+	"maritalStatus": "холост",
+	"phone": "+7 (440) 554-32-12",
+	"email": "vitalia@gora.ru",
+	"avatarUrl": "/static/img/UserPic.png",
+	"interests": [
+		"музыка",
+		"компьютеры",
+		"радио"
+	]
+}

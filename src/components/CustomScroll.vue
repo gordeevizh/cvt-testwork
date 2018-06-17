@@ -23,41 +23,30 @@
 
 export default {
   name: 'CustomScroll',
-  props: {
-    containerHeight: {
-      default: 0,
-      type: Number
-    }
-  },
   data () {
     return {
       barHeight: 0,
       barPosition: 0,
       barStyle: {},
 
-      maxScrollHight: 0,
-
       systemScrollbarWidth: 0,
-      scrollerWidth: 0,
       scrollerStyle: {}
     }
   },
+  mounted () {
+    this.$refs.content.style.height = 0
+    this.updateScroller()
+    this.$refs.content.style.height = 'auto'
+    this.updateBar()
+  },
   updated () {
-    this.updateMaxScrollHight()
     this.updateBar()
     this.updateScroller()
-  },
-  mounted () {
-    this.updateBar()
   },
   methods: {
     moveBar () {
       this.updateBarPosition()
-
-      this.barStyle = {
-        'height': this.barHeight + 'px',
-        'transform': 'translateY(' + this.barPosition + 'px)'
-      }
+      this.updateBarStyle()
     },
     updateBar () {
       let oldBarHeight = this.barHeight
@@ -70,16 +59,15 @@ export default {
     updateScroller () {
       let oldSystemScrollbarWidth = this.systemScrollbarWidth
 
-      this.scrollerWidth = this.$refs.scroller.offsetWidth
-      this.systemScrollbarWidth = this.scrollerWidth - this.$refs.scroller.clientWidth
+      this.systemScrollbarWidth = this.$refs.scroller.offsetWidth - this.$refs.scroller.clientWidth
       if (oldSystemScrollbarWidth !== this.systemScrollbarWidth) {
         this.updateScrollerStyle()
       }
     },
     updateScrollerStyle () {
       this.scrollerStyle = {
-        'width': (this.scrollerWidth + this.systemScrollbarWidth) + 'px',
-        'height': this.containerHeight + 'px'
+        'width': (this.$refs.scroller.offsetWidth + this.systemScrollbarWidth) + 'px',
+        'height': this.$refs.wrapper.clientHeight + 'px'
       }
     },
     updateBarStyle () {
@@ -89,14 +77,11 @@ export default {
       }
     },
     updateBarHeight () {
-      this.barHeight = this.containerHeight / this.maxScrollHight * this.containerHeight
+      this.barHeight = this.$refs.wrapper.clientHeight / this.$refs.scroller.scrollHeight * this.$refs.wrapper.clientHeight
     },
     updateBarPosition () {
       let position = this.$refs.scroller.scrollTop
-      this.barPosition = (this.containerHeight - this.barHeight) / this.maxScrollHight * position
-    },
-    updateMaxScrollHight () {
-      this.maxScrollHight = this.$refs.scroller.scrollHeight - this.containerHeight
+      this.barPosition = this.$refs.wrapper.clientHeight / this.$refs.scroller.scrollHeight * position
     }
   }
 }
@@ -113,9 +98,6 @@ export default {
     padding: 0;
     border: none;
   }
-  .customScroll__scroller::-webkit-scrollbar {
-    width: 0;
-  }
   .customScroll__scrollbar {
     width: 5px;
     height: 100%;
@@ -131,5 +113,7 @@ export default {
     border-radius: 3px;
   }
   .customScroll__content {
+    display: flex;
+    flex-wrap: wrap;
   }
 </style>

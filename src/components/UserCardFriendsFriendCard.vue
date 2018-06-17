@@ -45,9 +45,11 @@ export default {
   .userCardFriendsFriendCard {
     display: flex;
     width: 50%;
+    margin-bottom: 30px;
   }
   .userCardFriendsFriendCard__image {
     width: 62px;
+    min-width: 62px;
     height: 62px;
   }
   .userCardFriendsFriendCard__info {

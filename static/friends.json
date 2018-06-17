@@ -1,30 +1,30 @@
 [
   {
-    "imgUrl": "/static/img/DefaultFriend.png",
+    "imgUrl": "/static/img/Pic.png",
     "fullName": "Лев Бронштейн",
     "address": "г. Ханты-Мансийск",
     "online": true
   },
   {
-    "imgUrl": "/static/img/DefaultFriend.png",
+    "imgUrl": "/static/img/Pic copy 3.png",
     "fullName": "Находка Капитал",
     "address": "г. Усть-Бельск",
     "online": false
   },
   {
-    "imgUrl": "/static/img/DefaultFriend.png",
+    "imgUrl": "/static/img/Pic copy.png",
     "fullName": "Яндекс Петренко",
     "address": "г. Пермь",
     "online": false
   },
   {
-    "imgUrl": "/static/img/DefaultFriend.png",
+    "imgUrl": "/static/img/Pic copy 4.png",
     "fullName": "Успех Возможностей",
     "address": "г. Радонеж",
     "online": true
   },
   {
-    "imgUrl": "/static/img/DefaultFriend.png",
+    "imgUrl": "/static/img/Pic copy 2.png",
     "fullName": "Инна Нашлась",
     "address": "г. Омск",
     "online": true
@@ -36,31 +36,31 @@
     "online": true
   },
   {
-    "imgUrl": "/static/img/DefaultFriend.png",
+    "imgUrl": "/static/img/Pic copy 5.png",
     "fullName": "Константин Константинопольский",
     "address": "г. Санкт-Петербург",
     "online": true
   },
   {
-    "imgUrl": "/static/img/DefaultFriend.png",
+    "imgUrl": "/static/img/Pic copy 6.png",
     "fullName": "Василий Котов",
     "address": "г. Котогорск",
     "online": true
   },
   {
-    "imgUrl": "/static/img/DefaultFriend.png",
+    "imgUrl": "/static/img/Pic copy 7.png",
     "fullName": "Екотерина Сметанина",
     "address": "с. Светломолочное",
     "online": true
   },
   {
-    "imgUrl": "/static/img/DefaultFriend.png",
+    "imgUrl": "/static/img/Pic copy 8.png",
     "fullName": "Маруся Кошкина",
     "address": "г. Пушистые пустоши",
     "online": false
   },
   {
-    "imgUrl": "/static/img/DefaultFriend.png",
+    "imgUrl": "/static/img/Pic copy 9.png",
     "fullName": "Кот Дивуар",
     "address": "г. Ямусукро",
     "online": true
